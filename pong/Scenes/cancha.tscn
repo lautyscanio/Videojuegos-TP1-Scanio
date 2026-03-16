@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://l81s0747vc43"]
+
+[ext_resource type="PackedScene" uid="uid://bjua1hhlur5v" path="res://Scenes/tabla.tscn" id="1_vbgog"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_o0y13"]
+a = Vector2(1160, 0)
+b = Vector2(0, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_8roi0"]
+a = Vector2(1149, 650)
+b = Vector2(0, 650)
+
+[node name="Cancha" type="Node2D" unique_id=302935609]
+
+[node name="Techo" type="StaticBody2D" parent="." unique_id=1533716025]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Techo" unique_id=505215550]
+shape = SubResource("SegmentShape2D_o0y13")
+debug_color = Color(1.2513996e-06, 0.3220103, 0.46067005, 0.9607843)
+
+[node name="Piso" type="StaticBody2D" parent="." unique_id=64286294]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piso" unique_id=2018691148]
+shape = SubResource("SegmentShape2D_8roi0")
+debug_color = Color(0, 0.32156864, 0.45882353, 0.9607843)
+
+[node name="Jugador 1" parent="." unique_id=1567447064 instance=ExtResource("1_vbgog")]
+position = Vector2(9, 4)
+tecla_arriba = "w"
+tecla_abajo = "s"
+
+[node name="Jugador 2" parent="." unique_id=1579735162 instance=ExtResource("1_vbgog")]
+position = Vector2(1053, 0)
