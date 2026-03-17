@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://omwifxoxcb4m"]
+
+[ext_resource type="Script" uid="uid://c1xvoeb5srhl1" path="res://Scripts/pelota.gd" id="1_usuhk"]
+[ext_resource type="Texture2D" uid="uid://bikqtvaku4ixl" path="res://table-tennis-ball-.png" id="2_xvw5w"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rb83p"]
+radius = 17.088007
+
+[node name="Pelota" type="CharacterBody2D" unique_id=297130494]
+script = ExtResource("1_usuhk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1799484572]
+position = Vector2(400, 178)
+shape = SubResource("CircleShape2D_rb83p")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=2067029912]
+position = Vector2(1.0000305, 0.99998474)
+scale = Vector2(0.059375033, 0.051249962)
+texture = ExtResource("2_xvw5w")
