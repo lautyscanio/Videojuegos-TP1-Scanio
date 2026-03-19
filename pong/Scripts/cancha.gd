@@ -1,22 +1,30 @@
-extends Node2D # (o el tipo de nodo que sea tu Cancha)
+extends Node2D
 
-# Variables para llevar la cuenta
-var puntos_j1: int = 0
-var puntos_j2: int = 0
+var puntos_j1 = 0
+var puntos_j2 = 0
 
-# Esta función será llamada por las porterías cuando la pelota entre
-func anotar_punto(jugador: int):
-	if jugador == 1:
-		puntos_j1 += 1
-		# Actualizamos el texto en la pantalla. Usamos $ para referirnos al nodo hijo.
-		$Puntaje1.text = str(puntos_j1) 
-	elif jugador == 2:
+func _ready():
+	# Nos aseguramos de que no haya texto ganador al arrancar
+	$fraseGanadora.text = ""
+
+# Esta señal la conectás desde el nodo arcoIzquierdo (Punto para el Jugador 2)
+func _on_arco_izquierdo_body_entered(body):
+	if body.name == "Pelota":
 		puntos_j2 += 1
 		$Puntaje2.text = str(puntos_j2)
+		chequear_ganador(2)
+		body.reiniciar()
 
-	# Verificamos si alguien llegó a 5
+# Esta señal la conectás desde el nodo arcoDerecho (Punto para el Jugador 1)
+func _on_arco_derecho_body_entered(body):
+	if body.name == "Pelota":
+		puntos_j1 += 1
+		$Puntaje1.text = str(puntos_j1)
+		chequear_ganador(1)
+		body.reiniciar()
+
+func chequear_ganador(jugador):
 	if puntos_j1 >= 5 or puntos_j2 >= 5:
-		$fraseGanadora.text=str("Juego terminado, gano el jugador ", jugador)
-		print("¡Juego Terminado! Ganó el jugador ", jugador)
-		# Pausa todo el juego para que la pelota y los jugadores no se muevan más
-		get_tree().paused = true 
+		$fraseGanadora.text = "Juego terminado, gano el jugador " + str(jugador)
+		print("¡Juego Terminado! Ganó el jugador " + str(jugador))
+		get_tree().paused = true

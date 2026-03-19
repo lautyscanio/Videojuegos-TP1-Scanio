@@ -1,10 +1,14 @@
 [gd_scene format=3 uid="uid://l81s0747vc43"]
 
 [ext_resource type="Script" uid="uid://cqjse8nn7wsso" path="res://Scripts/cancha.gd" id="1_fkth8"]
-[ext_resource type="Script" uid="uid://bk3fj3dqeh0eu" path="res://Scripts/arco.gd" id="1_o0phj"]
 [ext_resource type="Texture2D" uid="uid://ds7qr0125kpvt" path="res://cancha.png" id="1_o0y13"]
 [ext_resource type="PackedScene" uid="uid://bjua1hhlur5v" path="res://Scenes/tabla.tscn" id="1_vbgog"]
 [ext_resource type="PackedScene" uid="uid://omwifxoxcb4m" path="res://Scenes/pelota.tscn" id="3_8roi0"]
+[ext_resource type="Texture2D" uid="uid://c5j5riojwd3qn" path="res://paleta_azul.png" id="4_fkth8"]
+[ext_resource type="Texture2D" uid="uid://cmpus5s0glvti" path="res://paleta_roja.png" id="5_e0md7"]
+[ext_resource type="Script" uid="uid://ifht58cc8hot" path="res://Scripts/pausa.gd" id="7_m078u"]
+[ext_resource type="Texture2D" uid="uid://dm8siswp3q5ib" path="res://pausa.png" id="8_ajava"]
+[ext_resource type="Script" uid="uid://d16nhxjh3jyp1" path="res://Scripts/texture_button.gd" id="9_m20v1"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_fkth8"]
 a = Vector2(1069, 67)
@@ -32,7 +36,6 @@ shape = SubResource("SegmentShape2D_fkth8")
 debug_color = Color(0.93875855, 1.6460717e-05, 0.624459, 0.41960785)
 
 [node name="arcoIzquierdo" type="Area2D" parent="." unique_id=1455414542]
-script = ExtResource("1_o0phj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="arcoIzquierdo" unique_id=1533983140]
 shape = SubResource("SegmentShape2D_e0md7")
@@ -57,15 +60,26 @@ shape = SubResource("SegmentShape2D_8roi0")
 debug_color = Color(0, 0.32156864, 0.45882353, 0.9607843)
 
 [node name="Jugador 1" parent="." unique_id=1567447064 instance=ExtResource("1_vbgog")]
-position = Vector2(60, 7)
+position = Vector2(-124, 18)
 tecla_arriba = "w"
 tecla_abajo = "s"
 
+[node name="Sprite2D2" type="Sprite2D" parent="Jugador 1" unique_id=1422921353]
+position = Vector2(206.0625, 314.17188)
+scale = Vector2(0.8024193, 0.7743803)
+texture = ExtResource("4_fkth8")
+
 [node name="Jugador 2" parent="." unique_id=1579735162 instance=ExtResource("1_vbgog")]
-position = Vector2(990, 3)
+position = Vector2(825, 33)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Jugador 2" unique_id=503551115]
+position = Vector2(240, 321.99994)
+scale = Vector2(0.9309724, 1.0616666)
+texture = ExtResource("5_e0md7")
+flip_h = true
 
 [node name="Pelota" parent="." unique_id=297130494 instance=ExtResource("3_8roi0")]
-position = Vector2(179, 150)
+position = Vector2(577, 321)
 
 [node name="Puntaje1" type="Label" parent="." unique_id=1854295771]
 offset_left = 319.0
@@ -83,12 +97,35 @@ theme_override_font_sizes/font_size = 56
 text = "0"
 
 [node name="fraseGanadora" type="Label" parent="." unique_id=613561104]
-offset_left = 156.0
-offset_top = 252.0
-offset_right = 1167.0
-offset_bottom = 482.0
+offset_left = 86.0
+offset_top = 225.0
+offset_right = 1097.0
+offset_bottom = 455.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 
-[connection signal="body_entered" from="arcoDerecho" to="arcoIzquierdo" method="_on_arco_derecho_body_entered"]
-[connection signal="body_entered" from="arcoIzquierdo" to="arcoIzquierdo" method="_on_arco_body_entered"]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=112975951]
+process_mode = 3
+script = ExtResource("7_m078u")
+
+[node name="menuPausa" type="Control" parent="CanvasLayer" unique_id=1226690302]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer" unique_id=1471706807]
+process_mode = 3
+offset_left = 1070.0
+offset_top = -28.0
+offset_right = 1143.0
+offset_bottom = 83.0
+texture_normal = ExtResource("8_ajava")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("9_m20v1")
+
+[connection signal="body_entered" from="arcoDerecho" to="." method="_on_arco_derecho_body_entered"]
+[connection signal="body_entered" from="arcoIzquierdo" to="." method="_on_arco_izquierdo_body_entered"]
+[connection signal="pressed" from="CanvasLayer/TextureButton" to="CanvasLayer/TextureButton" method="_on_pressed"]

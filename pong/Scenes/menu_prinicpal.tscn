@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dqtrjrvduofxp"]
+
+[ext_resource type="Script" uid="uid://b0hp2pemsl4i" path="res://Scripts/menu_prinicpal.gd" id="1_fa7uj"]
+[ext_resource type="Texture2D" uid="uid://ktb3qx2svbox" path="res://foto_menu.jpg" id="2_lot15"]
+
+[node name="menu_prinicpal" type="Control" unique_id=1217324351]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fa7uj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=989586228]
+position = Vector2(576.50006, 326)
+scale = Vector2(1.8741833, 1.6078432)
+texture = ExtResource("2_lot15")
+
+[node name="Button" type="Button" parent="." unique_id=362286393]
+layout_mode = 0
+offset_left = 438.0
+offset_top = 286.0
+offset_right = 687.0
+offset_bottom = 377.0
+text = "JUGAR"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

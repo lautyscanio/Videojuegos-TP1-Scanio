@@ -2,15 +2,16 @@
 
 [ext_resource type="Script" uid="uid://b8gf4q52m81qh" path="res://Scripts/tabla.gd" id="1_tgi3x"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ymotp"]
-size = Vector2(18, 147.5)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s2e57"]
+radius = 49.0
+height = 100.0
 
 [node name="Tabla" type="CharacterBody2D" unique_id=1567447064]
 script = ExtResource("1_tgi3x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1914490947]
-position = Vector2(52, 317.25)
-shape = SubResource("RectangleShape2D_ymotp")
+position = Vector2(221, 298)
+shape = SubResource("CapsuleShape2D_s2e57")
 
 [node name="ColorRect" type="ColorRect" parent="CollisionShape2D" unique_id=350764712]
 custom_minimum_size = Vector2(18, 147)
@@ -18,4 +19,4 @@ offset_left = -11.0
 offset_top = -73.25
 offset_right = 11.0
 offset_bottom = 73.75
-color = Color(0, 0, 0, 1)
+color = Color(0, 0, 0, 0)
