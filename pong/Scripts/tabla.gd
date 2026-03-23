@@ -3,26 +3,24 @@ extends CharacterBody2D
 @export var tecla_arriba: String = "ui_up"
 @export var tecla_abajo: String = "ui_down"
 
-var speed = 400.0
-# Creamos una variable para guardar dónde tiene que estar anclada
+var velocidad = 400.0
+
 var posicion_x_fija: float
 
 func _ready():
-	# Apenas arranca el juego, guardamos su posición horizontal original
 	posicion_x_fija = global_position.x
 
 func _physics_process(delta):
-	var current_velocity = Vector2.ZERO
+	var velocidad_actual = Vector2.ZERO
 	
 	if Input.is_action_pressed(tecla_arriba):
-		current_velocity.y = -speed
+		velocidad_actual.y = -velocidad
 	elif Input.is_action_pressed(tecla_abajo):
-		current_velocity.y = speed
+		velocidad_actual.y = velocidad
 		
-	move_and_collide(current_velocity * delta)
+	move_and_collide(velocidad_actual * delta)
 	
-	# --- LA MAGIA PARA ARREGLAR EL BUG ---
-	# Forzamos a la paleta a volver a su coordenada X original y a no girar, 
-	# sin importar cuánto la empuje la pelota.
+
+	#esto es para arreglar el bug que si la pelota pega abajo de la paleta no se mueva la paleta
 	global_position.x = posicion_x_fija
 	rotation = 0

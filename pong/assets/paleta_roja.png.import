@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0ojb5ted1fnj"
-path="res://.godot/imported/icono-vector-raqueta-tenis-pixel-art-juego-8-bits-sobre-fondo-blanco_360488-368.jpg-6654716f33dccc4296fcabfe555e8eb7.ctex"
+uid="uid://cmpus5s0glvti"
+path="res://.godot/imported/paleta_roja.png-88c9973b74fc6e0a4c2440b2a6fd1c8c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://paleta_azul_files/icono-vector-raqueta-tenis-pixel-art-juego-8-bits-sobre-fondo-blanco_360488-368.jpg"
-dest_files=["res://.godot/imported/icono-vector-raqueta-tenis-pixel-art-juego-8-bits-sobre-fondo-blanco_360488-368.jpg-6654716f33dccc4296fcabfe555e8eb7.ctex"]
+source_file="res://assets/paleta_roja.png"
+dest_files=["res://.godot/imported/paleta_roja.png-88c9973b74fc6e0a4c2440b2a6fd1c8c.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ds7qr0125kpvt"
-path="res://.godot/imported/cancha.png-1e96cff8255ea348939a02d3b4dbe70e.ctex"
+uid="uid://c5j5riojwd3qn"
+path="res://.godot/imported/paleta_azul.png-e1b5be5d3d61b550a5d1702ec3799f11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cancha.png"
-dest_files=["res://.godot/imported/cancha.png-1e96cff8255ea348939a02d3b4dbe70e.ctex"]
+source_file="res://assets/paleta_azul.png"
+dest_files=["res://.godot/imported/paleta_azul.png-e1b5be5d3d61b550a5d1702ec3799f11.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3e2m3hphfdfb"
-path="res://.godot/imported/ilustracion-pixel-art-raqueta-pixelada-raqueta-tenis-deportes-icono-raqueta-tenis-pixelado_1038602-504.jpg-4dc4dcbcf543e9764b430c1023ca1fdd.ctex"
+uid="uid://ds7qr0125kpvt"
+path="res://.godot/imported/cancha.png-d9d18e0683da4e26f16e63ece46fd163.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://paleta_azul_files/ilustracion-pixel-art-raqueta-pixelada-raqueta-tenis-deportes-icono-raqueta-tenis-pixelado_1038602-504.jpg"
-dest_files=["res://.godot/imported/ilustracion-pixel-art-raqueta-pixelada-raqueta-tenis-deportes-icono-raqueta-tenis-pixelado_1038602-504.jpg-4dc4dcbcf543e9764b430c1023ca1fdd.ctex"]
+source_file="res://assets/cancha.png"
+dest_files=["res://.godot/imported/cancha.png-d9d18e0683da4e26f16e63ece46fd163.ctex"]
 
 [params]
 

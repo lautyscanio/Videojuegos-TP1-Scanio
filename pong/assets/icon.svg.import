@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4pgmwy2yjwlb"
-path="res://.godot/imported/signo-madera-pixel-carretera_158677-1598.jpg-1db28b7a545160e412201a732a93ace3.ctex"
+uid="uid://f0utvxt0fri5"
+path="res://.godot/imported/icon.svg-56083ea2a1f1a4f1e49773bdc6d7826c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://paleta_azul_files/signo-madera-pixel-carretera_158677-1598.jpg"
-dest_files=["res://.godot/imported/signo-madera-pixel-carretera_158677-1598.jpg-1db28b7a545160e412201a732a93ace3.ctex"]
+source_file="res://assets/icon.svg"
+dest_files=["res://.godot/imported/icon.svg-56083ea2a1f1a4f1e49773bdc6d7826c.ctex"]
 
 [params]
 
@@ -38,3 +38,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

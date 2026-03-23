@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://evcq50u8685a"
-path="res://.godot/imported/ilustracion-pixel-art-paleta-ping-pong-paleta-ping-pong-pixelada-icono-paleta-ping-pong-deportiva_1038602-481.jpg-e68803734ec574daf9c9f8b8b956101e.ctex"
+uid="uid://bikqtvaku4ixl"
+path="res://.godot/imported/table-tennis-ball-.png-e32db2a0750143baa2dbf5f0c9a2767a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://paleta_azul_files/ilustracion-pixel-art-paleta-ping-pong-paleta-ping-pong-pixelada-icono-paleta-ping-pong-deportiva_1038602-481.jpg"
-dest_files=["res://.godot/imported/ilustracion-pixel-art-paleta-ping-pong-paleta-ping-pong-pixelada-icono-paleta-ping-pong-deportiva_1038602-481.jpg-e68803734ec574daf9c9f8b8b956101e.ctex"]
+source_file="res://assets/table-tennis-ball-.png"
+dest_files=["res://.godot/imported/table-tennis-ball-.png-e32db2a0750143baa2dbf5f0c9a2767a.ctex"]
 
 [params]
 

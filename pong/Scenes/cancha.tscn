@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://l81s0747vc43"]
 
 [ext_resource type="Script" uid="uid://cqjse8nn7wsso" path="res://Scripts/cancha.gd" id="1_fkth8"]
-[ext_resource type="Texture2D" uid="uid://ds7qr0125kpvt" path="res://cancha.png" id="1_o0y13"]
+[ext_resource type="Texture2D" uid="uid://ds7qr0125kpvt" path="res://assets/cancha.png" id="1_o0y13"]
 [ext_resource type="PackedScene" uid="uid://bjua1hhlur5v" path="res://Scenes/tabla.tscn" id="1_vbgog"]
 [ext_resource type="PackedScene" uid="uid://omwifxoxcb4m" path="res://Scenes/pelota.tscn" id="3_8roi0"]
-[ext_resource type="Texture2D" uid="uid://c5j5riojwd3qn" path="res://paleta_azul.png" id="4_fkth8"]
-[ext_resource type="Texture2D" uid="uid://cmpus5s0glvti" path="res://paleta_roja.png" id="5_e0md7"]
+[ext_resource type="Texture2D" uid="uid://c5j5riojwd3qn" path="res://assets/paleta_azul.png" id="4_fkth8"]
+[ext_resource type="Texture2D" uid="uid://cmpus5s0glvti" path="res://assets/paleta_roja.png" id="5_e0md7"]
 [ext_resource type="Script" uid="uid://ifht58cc8hot" path="res://Scripts/pausa.gd" id="7_m078u"]
-[ext_resource type="Texture2D" uid="uid://dm8siswp3q5ib" path="res://pausa.png" id="8_ajava"]
+[ext_resource type="Texture2D" uid="uid://dm8siswp3q5ib" path="res://assets/pausa.png" id="8_ajava"]
 [ext_resource type="Script" uid="uid://d16nhxjh3jyp1" path="res://Scripts/texture_button.gd" id="9_m20v1"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_fkth8"]
@@ -27,6 +27,7 @@ a = Vector2(994, 634)
 b = Vector2(12, 634)
 
 [node name="Cancha" type="Node2D" unique_id=302935609]
+position = Vector2(2, 6)
 script = ExtResource("1_fkth8")
 
 [node name="arcoDerecho" type="Area2D" parent="." unique_id=1784356821]
@@ -97,10 +98,10 @@ theme_override_font_sizes/font_size = 56
 text = "0"
 
 [node name="fraseGanadora" type="Label" parent="." unique_id=613561104]
-offset_left = 86.0
-offset_top = 225.0
-offset_right = 1097.0
-offset_bottom = 455.0
+offset_left = 161.0
+offset_top = 198.0
+offset_right = 1172.0
+offset_bottom = 428.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 
