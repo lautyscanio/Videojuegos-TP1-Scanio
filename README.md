@@ -15,8 +15,7 @@ Además de la jugabilidad clásica de Pong, este proyecto incluye algunas funcio
 La gran mayoría de la lógica base de este proyecto, así como la estructura inicial, fue aprendida y adaptada a partir de este tutorial:
 * 📺 [GODOT para PRINCIPIANTES! (Pong)](https://www.youtube.com/watch?v=YCTPNRw1EXo)
 
-**Assets Gráficos:**
-* Todos los sprites e imágenes utilizados en este proyecto (la cancha, la paleta, la pelota y los iconos de los menús) fueron obtenidos de imagenes de internet.
+**Assets Gráficos:** Todos los sprites e imágenes utilizados en este proyecto (la cancha, la paleta, la pelota y los iconos de los menús) fueron obtenidos de imagenes de internet.
 
 * **Paleta azul:** https://www.freepik.es/vector-premium/ilustracion-pixel-art-paleta-ping-pong-paleta-ping-pong-pixelada-icono-paleta-ping-pong-deportiva_80327216.htm
 * **Cancha:** https://www.shutterstock.com/es/image-vector/flat-pin-pong-table-top-view-1795792135?trackingId=ad6bb904-d3b1-4667-817c-94dcddc317af&listId=searchResults
